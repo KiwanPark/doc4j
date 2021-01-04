@@ -1,0 +1,68 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        applicationId "com.s2d5.doc4j4"
+        minSdkVersion 23
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0.13"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+        exclude 'readme.html'
+        exclude 'license.html'
+        exclude 'META-INF/eclipse.inf'
+    }
+}
+
+dependencies {
+    //implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    implementation 'javax.xml.bind:jaxb-api:2.3.1'
+    implementation group: 'com.fasterxml', name: 'aalto-xml', version: '1.0.0'
+
+    implementation files('libs/awt-bastardised-17v8.jar')
+    //implementation files('libs/slf4j-android-1.6.1-RC1.jar')
+    //implementation files('libs/activation.jar')
+    implementation files('libs/additionnal.jar')
+    implementation files('libs/jaxb-core-2.3.0-SNAPSHOT-ANDROID.jar')
+    implementation files('libs/jaxb-runtime-2.3.0-SNAPSHOT-ANDROID.jar')
+    implementation files('libs/istack-commons-runtime-3.0.4-SNAPSHOT.jar')
+    // with org.slf4j removed
+    implementation files('libs/docx4j-6.1.1-SNAPSHOT-shaded.jar')
+    implementation files('libs/jsr173-1.0.jar')
+}
