@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Doc4J4</string>
+    <string name="docx_garbage_mapper">(PAGEREF _Toc)+([0-9])+( )*</string>
+    <string name="epub_garbage_match">[0-9a-zA-Z]*([.sgc-])+([0-9]*) .*\\{[0-9a-zA-Z:%-]*\\}*.*\\}</string>
 </resources>
