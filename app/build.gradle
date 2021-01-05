@@ -7,7 +7,7 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        applicationId "com.s2d5.doc4j4"
+        applicationId "com.s2d5.docx4j4"
         minSdkVersion 23
         targetSdkVersion 30
         versionCode 1
@@ -57,12 +57,8 @@ dependencies {
     implementation files('libs/jaxb-core-2.3.0-SNAPSHOT-ANDROID.jar')
     implementation files('libs/jaxb-runtime-2.3.0-SNAPSHOT-ANDROID.jar')
     implementation files('libs/istack-commons-runtime-3.0.4-SNAPSHOT.jar')
-    // with org.slf4j removed
     implementation files('libs/docx4j-6.1.1-SNAPSHOT-shaded.jar')
     implementation files('libs/jsr173-1.0.jar')
     implementation 'javax.xml.bind:jaxb-api:2.3.1'
     implementation group: 'com.fasterxml', name: 'aalto-xml', version: '1.0.0'
-    //implementation files('libs/slf4j-android-1.6.1-RC1.jar')
-    //implementation files('libs/activation.jar')
-    //implementation files('libs/additionnal.jar')
 }

@@ -1,4 +1,4 @@
-package com.s2d5.doc4j4;
+package com.s2d5.docx4j4;
 
 import org.junit.Test;
 
